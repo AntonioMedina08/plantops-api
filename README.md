@@ -27,6 +27,8 @@ Manufacturing plants frequently rely on spreadsheets, paper logs, or disconnecte
 - **Build Backend:** `uv_build` (src-layout package)
 - **Linter & Formatter:** Ruff
 - **Static Type Checker:** MyPy (`strict = true`)
+- **Testing Suite:** pytest + httpx
+
 
 ### Planned Stack (Upcoming Phases)
 
@@ -34,7 +36,6 @@ Manufacturing plants frequently rely on spreadsheets, paper logs, or disconnecte
 - **ASGI Server:** Uvicorn
 - **Data Validation & Settings:** Pydantic v2 / `pydantic-settings`
 - **Database ORM & Migrations:** SQLAlchemy 2.0 + Alembic
-- **Testing Suite:** pytest + httpx
 
 ## Prerequisites
 
@@ -59,4 +60,5 @@ uv run ruff format --check .
 uv run mypy src
 uv lock --check
 uv run plantops-api
+uv run pytest
 ```
