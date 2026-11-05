@@ -1,12 +1,12 @@
 [project]
 name = "plantops-api"
 version = "0.1.0"
-description = "Add your description here"
+description = "Industrial maintenance management (CMMS) backend API for asset tracking, fault reporting, and work orders."
 readme = "README.md"
 authors = [
     { name = "Antonio Medina", email = "AntonioMedinamj@gmail.com" }
 ]
-requires-python = ">=3.12"
+requires-python = ">=3.14"
 dependencies = []
 
 [project.scripts]
@@ -30,13 +30,13 @@ line-length = 88
 select = [
     "E",      # pycodestyle errors
     "F",      # Pyflakes
-    "I",      # isort (orden de imports)
-    "UP",     # pyupgrade (sintaxis moderna)
-    "B",      # flake8-bugbear (bugs comunes)
-    "SIM",    # flake8-simplify (código más limpio)
+    "I",      # isort (import sorting)
+    "UP",     # pyupgrade (modern syntax)
+    "B",      # flake8-bugbear (common bugs)
+    "SIM",    # flake8-simplify (code simplification)
 ]
 ignore = [
-    "E501",   # line length → delegamos al formatter
+    "E501",   # line length -> delegated to formatter
 ]
 
 [tool.ruff.format]
@@ -47,10 +47,3 @@ line-ending = "lf"
 [tool.mypy]
 python_version = "3.14"
 strict = true
-warn_return_any = true
-warn_unused_configs = true
-disallow_untyped_defs = true
-disallow_incomplete_defs = true
-check_untyped_defs = true
-disallow_untyped_decorators = true
-no_implicit_optional = true
