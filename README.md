@@ -42,3 +42,21 @@ Manufacturing plants frequently rely on spreadsheets, paper logs, or disconnecte
 - Python 3.14 (automatically managed via `uv python install 3.14`).
 
 ## Local Setup
+
+```bash
+git clone https://github.com/AntonioMedina08/plantops-api.git
+cd plantops-api
+uv sync
+```
+
+## Quality Checks & Verification
+
+Run the local verification commands before opening or updating a pull request:
+
+```bash
+uv run ruff check .
+uv run ruff format --check .
+uv run mypy src
+uv lock --check
+uv run plantops-api
+```
